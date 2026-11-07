@@ -18,13 +18,13 @@
 <body>
 <main>
 <h1>영어북이 개인정보처리방침</h1>
-<p class="muted">시행일: 2026년 11월 4일 (이전 버전: 2026년 10월 10일)</p>
+<p class="muted">시행일: 2026년 11월 7일 (이전 버전: 2026년 11월 4일, 2026년 10월 10일)</p>
 
-<p>영어북이(이하 "앱")는 회원가입이나 로그인 없이 쓰는 개인 영어 학습 앱입니다. 개발자는 이름, 연락처처럼 이용자를 직접 식별할 수 있는 개인정보를 수집하지 않습니다. 다만 앱에 표시되는 광고를 위해, 아래 4항에 적은 대로 Google AdMob이 기기 정보를 수집합니다.</p>
+<p>영어북이(이하 "앱")는 회원가입이나 로그인 없이 쓰는 개인 영어 학습 앱입니다. 개발자는 이름, 연락처처럼 이용자를 직접 식별할 수 있는 개인정보를 수집하지 않습니다. 다만 앱에 표시되는 광고와 익명 사용 통계를 위해, 아래 4·5항에 적은 대로 Google(AdMob, Firebase)이 기기 정보를 수집합니다.</p>
 
 <h2>1. 기기 안에만 저장하는 정보</h2>
 <ul>
-  <li>학습 기록(푼 문제, 정답 여부, 복습 일정), 즐겨찾기, 설정(하루 목표, 알림 시각 등)은 <strong>이용자의 기기 안에만</strong> 저장되며 개발자나 다른 서버로 전송되지 않습니다.</li>
+  <li>학습 기록(푼 문제, 정답 여부, 복습 일정), 즐겨찾기, 설정(하루 목표, 알림 시각 등)은 <strong>이용자의 기기 안에만</strong> 저장됩니다. 기록 자체는 서버로 전송되지 않으며, 5항의 익명 사용 통계(어떤 학습을 했는지, 정답 여부 같은 집계용 정보)만 전송됩니다.</li>
   <li>앱을 삭제하면 이 정보도 함께 삭제됩니다. 앱의 "학습 기록 초기화"로 언제든 지울 수 있습니다.</li>
 </ul>
 
@@ -36,10 +36,11 @@
 </ul>
 <p>이 정보는 업데이트 전달과 업데이트를 받은 기기 수 집계에만 쓰이며, 광고나 다른 목적으로 쓰이지 않습니다. 처리 방식은 <a href="https://expo.dev/privacy">Expo 개인정보처리방침</a>을 따릅니다.</p>
 
-<h2>3. 알림과 발음 듣기</h2>
+<h2>3. 알림·발음 듣기·녹음</h2>
 <ul>
   <li>학습 알림은 기기 안에서 예약되는 로컬 알림이며, 알림을 위해 정보를 서버로 보내지 않습니다. 알림 권한은 이용자가 알림을 켤 때만 요청합니다.</li>
   <li>발음 듣기는 기기에 내장된 음성 합성(TTS) 기능을 사용합니다.</li>
+  <li>회화 연습에서 "녹음하며 말해 보기"를 누를 때만 마이크 권한을 요청합니다. 녹음은 내 목소리를 바로 들어 보는 데만 쓰이며, 기기 안에서 재생하고 다음 문장으로 넘어가면 지웁니다. 녹음은 서버로 전송되지 않고, 음성 인식도 하지 않습니다.</li>
 </ul>
 
 <h2>4. 광고 (Google AdMob)</h2>
@@ -56,23 +57,32 @@
   <li>Android 설정 → 개인정보 보호 → 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 메뉴 이름은 기기마다 다를 수 있습니다.</li>
   <li>광고 ID를 삭제하면 맞춤 광고 대신 일반 광고가 표시됩니다.</li>
 </ul>
-<p>이 밖에 앱에는 별도의 사용 분석 도구나 GPS 위치 추적이 없습니다. 개발자는 개인정보를 판매하지 않습니다. 앱은 마이크, 카메라, 연락처 권한을 사용하지 않습니다.</p>
+<h2>5. 익명 사용 통계 (Google Firebase Analytics)</h2>
+<p>앱을 더 낫게 만들기 위해 Google Firebase Analytics로 익명 사용 통계를 모읍니다. 전송되는 정보는 다음과 같습니다.</p>
+<ul>
+  <li><strong>앱 상호작용</strong>: 어떤 학습(단어, 회화 등)을 했는지와 정답 여부, 연 화면, 하루 목표·수준 같은 설정값, 앱 실행·설치 같은 기본 이벤트</li>
+  <li><strong>기기 식별자</strong>: Firebase가 설치마다 만드는 앱 인스턴스 ID</li>
+  <li><strong>기기 정보와 대략적인 지역</strong>: 기기 종류, 운영체제, IP 주소로 추정한 국가·지역</li>
+</ul>
+<p>푼 문장, 입력한 답, 녹음, 이름, 연락처는 전송하지 않습니다. 이 정보는 앱 개선을 위한 통계 분석에만 쓰이며, 암호화된 연결로 전송됩니다. 처리 방식은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호</a>를 참고하세요.</p>
+<p>이 밖에 GPS 위치 추적은 없습니다. 개발자는 개인정보를 판매하지 않습니다. 앱은 카메라, 연락처 권한을 사용하지 않습니다.</p>
 
-<h2>5. 아동</h2>
+<h2>6. 아동</h2>
 <p>앱은 성인 학습자를 대상으로 하며, 만 13세 미만 아동을 대상으로 하지 않습니다.</p>
 
-<h2>6. 변경과 문의</h2>
+<h2>7. 변경과 문의</h2>
 <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 알립니다. 문의: <a href="mailto:wogud1514@gmail.com">wogud1514@gmail.com</a></p>
 
 <hr>
 
 <h1>Privacy Policy — 영어북이 (Bookee)</h1>
-<p class="muted">Effective: November 4, 2026 (previous version: October 10, 2026)</p>
-<p>Bookee is a personal English-learning app used without sign-up or login. The developer does not collect directly identifying information such as your name or contact details. However, Google AdMob collects device information to show ads in the app, as described below.</p>
+<p class="muted">Effective: November 7, 2026 (previous versions: November 4, 2026; October 10, 2026)</p>
+<p>Bookee is a personal English-learning app used without sign-up or login. The developer does not collect directly identifying information such as your name or contact details. However, Google (AdMob and Firebase) collects device information for ads and anonymous usage analytics, as described below.</p>
 <ul>
-  <li><strong>On-device only:</strong> study history, favorites and settings are stored only on your device and are never sent to the developer. Uninstalling the app or using "Reset study history" deletes them.</li>
+  <li><strong>On-device only:</strong> study history, favorites and settings are stored only on your device. The history itself is never uploaded; only the anonymous usage statistics described below (such as the kind of study and whether it was correct) are sent. Uninstalling the app or using "Reset study history" deletes them.</li>
   <li><strong>App updates:</strong> on launch the app checks Expo's EAS Update service for new content. The request contains a random per-installation identifier (not linked to your identity or advertising ID), the OS, the app version and update information. It is used only to deliver updates and count updated devices. See <a href="https://expo.dev/privacy">Expo's privacy policy</a>.</li>
   <li><strong>Notifications and speech:</strong> reminders are local notifications scheduled on the device; pronunciation uses the device's built-in text-to-speech.</li>
+  <li><strong>Microphone:</strong> requested only when you tap "record while speaking" in conversation practice. The recording is used only to play your own voice back on the device and is deleted when you move to the next sentence. It is never uploaded and no speech recognition is performed.</li>
   <li><strong>Ads (Google AdMob):</strong> the app shows banner ads. Google collects the following to serve ads, personalize them, measure their performance and prevent fraud:
     <ul>
       <li>device identifiers, such as the Android advertising ID</li>
@@ -81,7 +91,8 @@
       <li>crash and diagnostic data</li>
     </ul>
     This data is shared with Google and its ad partners and is encrypted in transit. You can reset or delete your advertising ID in Android Settings → Privacy → Ads. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>.</li>
-  <li><strong>No other analytics or GPS tracking.</strong> The developer does not sell personal data. No microphone, camera or contacts permissions are used.</li>
+  <li><strong>Anonymous usage analytics (Google Firebase Analytics):</strong> to improve the app, the following is sent: which kind of study you did (words, conversation, etc.) and whether it was correct, screens opened, settings such as daily goal and level, and basic events such as app open and install; the app instance ID Firebase creates per installation; device type, OS and approximate country/region from your IP address. Sentences, your answers, recordings, name and contact details are never sent. Used only for statistics to improve the app, encrypted in transit. See <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>.</li>
+  <li><strong>No GPS tracking.</strong> The developer does not sell personal data. No camera or contacts permissions are used.</li>
   <li><strong>Children:</strong> the app is intended for adults and is not directed to children under 13.</li>
   <li><strong>Contact:</strong> <a href="mailto:wogud1514@gmail.com">wogud1514@gmail.com</a></li>
 </ul>
